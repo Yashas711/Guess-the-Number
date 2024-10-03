@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guess the Number</title>
+    <style>
+      body {
+        font-size: {{ 24 ~ "px" }};
+        text-align: center;
+        background-color: {{ color }};
+      }
+      button[type="submit"] {
+        font-size: {{ 24 ~ "px" }};
+        width: 150px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ result }}</h1>
+    <p>{{ result }}</p>
+    <form action="/play_again" method="post">
+      <button type="submit">Play Again</button>
+    </form>
+  </body>
+</html>

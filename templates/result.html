@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guess the Number</title>
+    <style>
+      body {
+        font-size: {{ 24 ~ "px" }};
+        text-align: center;
+        background-color: {{ color }};
+      }
+      input[type="number"] {
+        font-size: {{ 18 ~ "px" }};
+        width: 150px;
+        height: 50px;
+      }
+      button[type="submit"] {
+        font-size: {{ 18 ~ "px" }};
+        width: 150px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ result }}</h1>
+    <p>{{ result }}</p>
+    <form action="/guess" method="post">
+      <input type="number" name="guess" placeholder="Guess Again">
+      <input type="hidden" name="tries" value="{{ tries }}">
+      <button type="submit">Guess Again</button>
+    </form>
+  </body>
+</html>

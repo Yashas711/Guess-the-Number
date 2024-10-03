@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guess the Number</title>
+    <style>
+      body {
+        font-size: {{ 24 ~ "px" }};
+        text-align: center;
+      }
+      .rules {
+        font-size: {{ 18 ~ "px" }};
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .color-key {
+        font-size: {{ 18 ~ "px" }};
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      input[type="number"] {
+        font-size: {{ 18 ~ "px" }};
+        width: 100px;
+        height: 50px;
+      }
+      button[type="submit"] {
+        font-size: {{ 18 ~ "px" }};
+        width: 150px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guess the Number</h1>
+    <div class="rules">
+      <h2>Game Rules:</h2>
+      Guess a number between 1 and 100.<br>
+      If your guess is too high or too low, the background color will change to indicate how close you are.<br>
+      Keep guessing until you get the correct number!
+    </div>
+    <div class="color-key">
+      <h2>Color Key:</h2>
+      Red: Your guess is too high or too low (difference > 25)<br>
+      Orange: Your guess is high or low (difference between 10 and 25)<br>
+      Yellow: Your guess is slightly high or low (difference between 5 and 10)<br>
+      Green: Congratulations! You guessed the correct number!
+    </div>
+    <form action="/guess" method="post">
+      <input type="number" name="guess" placeholder="Guess">
+      <input type="hidden" name="tries" value="1">
+      <button type="submit">Guess</button>
+    </form>
+  </body>
+</html>
